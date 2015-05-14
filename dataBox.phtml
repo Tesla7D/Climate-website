@@ -1,0 +1,28 @@
+<div id = "uploadBox">
+	<div class = "subtitle">Upload Data</div>
+	<input id = "uploadCSV" type="button" value="Upload CSV"/>
+	<div class = "subtitle">Visualize Data</div>
+	<select id = "seriesSelect">
+		<option value="">*select</option>
+		<option value="precipitation">Precipitation</option>
+		<option value="days">Heat/Cooling days</option>
+		<option value="temperature">Temperature</option>
+	</select>
+	<select id = "stateSelect">
+		<option value="">All</option>
+		<?php
+			$data = new Data();
+			$regions = $data->getRegions();
+			for($i = 0; $i < count($regions); $i++){
+				echo "<option value = '" . $regions[$i]["code"] . "'>" . $regions[$i]["name"] . "</option>";
+			}
+		?>
+	</select>	
+	
+	<div id = "fileInputContainer"><input name = "dataUploadInput" type="file" accept="text/csv"/></div>
+	<div id = "chartRegion"></div>
+	<div id = "slider2"></div>
+</div>
+<div id = "logoutContainer">
+	<a href="../">Logout</a>
+</div>

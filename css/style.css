@@ -1,0 +1,186 @@
+html,body{
+	position: absolute; top:0; left:0;
+	width: 100%; height: 100%;
+	font-family: Lato,Helvetica,sans-serif; font-weight: 100;
+	padding:0; margin:0;
+	text-align: center;
+	color:white;
+	background-color:rgba(0,0,0,0.1);
+}
+
+*{
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-ms-box-sizing:border-box;
+	-o-box-sizing:border-box;
+	outline: none;
+}
+
+/*
+ * ================================================
+ * 						Common
+ * ================================================
+ */
+a{
+	text-decoration: none;
+	color: inherit;
+}
+ 
+video {
+	position: fixed; right: 0; bottom: 0;
+	min-width: 100%; min-height: 100%;
+	width: auto; height: auto; z-index: -100;
+	background-size: cover;
+}
+
+input[type=text],input[type=password],input[type=button]{
+	border:1px solid rgba(0,0,0,0.1);
+	background-color:rgba(0,0,0,0.07);
+	padding:10px;
+	border-radius:4px;
+	font-size:16px;
+	width:200px;
+	text-align: left;
+	font-family: Lato;
+	font-weight: 100;
+	color:inherit;
+}
+
+input[type=button]{
+	padding:10px;
+	font-size: 18px;
+	width:160px;
+	text-align: center;
+	cursor: pointer;
+	display: block;
+	margin-top:20px;
+	margin-bottom:5px;
+}
+
+input[type=file]{
+	display: none; /* hide ugly file input, use custom button and trigger click event on file input instead */
+}
+
+.verticalCenter{
+	display: inline-block;
+	height:100%;
+	vertical-align: middle;
+}
+
+#title{
+	width: 100%;
+	text-align: center;
+	font-size: 40px;
+	font-family: Lato, Helvetica;
+	margin-bottom: 20px;
+	color:white;
+	opacity: 0;
+}
+
+/*
+ * ================================================
+ * 					Login Box
+ * ================================================
+ */
+#pageContainer{
+	vertical-align: middle;
+	display: inline-block;
+	border-radius:20px;
+	padding:30px;
+	border:1px solid rgba(0,0,0,0);
+	background-color:rgba(0,0,0,0);
+}
+
+#loginBox input[type=button]{
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#loginContainer{
+	opacity: 0;
+	overflow: hidden;
+}
+
+#logoutContainer{
+	opacity: 0;
+	display: none;
+	position: fixed;
+	right:0px;
+	top:0px;
+	min-width: 100px;
+	padding: 10px;
+	background-color:rgba(0,0,0,0.2);
+	-webkit-border-bottom-left-radius: 10px;
+	-moz-border-radius-bottomleft: 10px;
+	border-bottom-left-radius: 10px;
+	text-align:center;
+}
+
+#credentialsContainer{
+	overflow: hidden;
+	position: relative;
+}
+
+#chartRegion{
+	margin-top: 20px;
+}
+
+#slider1, #slider2{
+	margin: 10px
+}
+
+#placeholder{
+	width: 350px;
+	height: 120px;
+}
+
+#requestContainer{
+	position: absolute;
+	top:100%;
+	left:0;
+	width: 100%;
+}
+
+#loginSubcontainer{
+	position: absolute;
+	top:0;
+	left:0;
+	width: 100%;
+}
+
+.credential{
+	margin-bottom:20px;
+}
+
+.prompt{
+	width:130px;
+	display: inline-block;
+	font-size: 20px;
+	text-align: left;
+}
+
+#request{
+	font-size:14px;
+	cursor: pointer;
+}
+
+/*
+ * ================================================
+ * 					Data Box
+ * ================================================
+ */
+#uploadBox{
+	opacity: 0;
+	display: none;
+	text-align: left;
+}
+
+.subtitle{
+	font-size: 30px;
+	font-family: Lato, Helvetica;
+	margin-bottom: 20px;
+	color:white;
+	margin-top:20px;
+	margin-bottom:20px;
+}

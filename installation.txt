@@ -1,0 +1,12 @@
+This solution must be run on Apache because it uses .htaccess to
+create Search Engine Friendly URLs.  Apache also needs the mod_rewrite module enabled
+and the website files must be in the root folder of the server (or a virtual
+host)
+
+Also make sure hidden files are visible so you can confirm .htaccess is actually there.
+If it's not (though it should be), this should go in it:
+
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^?]*)$ /index.php [NC,L,QSA]
